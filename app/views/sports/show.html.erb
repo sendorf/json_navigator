@@ -1,0 +1,9 @@
+<h1><%="Events for #{@sport["title"]}"%></h1>
+
+<ul>
+  <% @events.each do |event| %>
+    <li>
+    <%= link_to event["title"], sport_event_path(@sport["id"],event["id"]) %>
+    </li>
+  <%end%>
+<ul>

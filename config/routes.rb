@@ -53,7 +53,9 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  resources :sports, only: [:index, :show]
+  resources :sports, only: [:index, :show] do
+    resources :events, only: [:show]
+  end
 
   root :to => "sports#index"
 end
