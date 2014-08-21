@@ -1,0 +1,9 @@
+<h1><%="#{@sport["title"]} outcomes for \"#{@event["title"]}\""%></h1>
+
+<ul>
+  <% @outcomes.each do |outcome| %>
+    <li>
+    <%= "Description: #{outcome["description"]}\tPrice: #{outcome["price"]}" %>
+    </li>
+  <%end%>
+<ul>

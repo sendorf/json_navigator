@@ -5,7 +5,7 @@ class SportsController < ApplicationController
   end
 
   def show
-    @sport = List.list["sports"].find(params[:id]).first
+    @sport = Sport.get_sport(List.list["sports"], params[:id])
     @events = @sport["events"]
   end
 
